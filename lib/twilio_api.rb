@@ -4,8 +4,8 @@ Dotenv.load
 
 class TwilioAPI
 
-  def initialize
-    @client = Twilio::REST::Client.new(ENV['AUTH_SID'], ENV['AUTH_TOKEN'])
+  def initialize client = Twilio::REST::Client.new(ENV['AUTH_SID'], ENV['AUTH_TOKEN'])
+    @client = client
   end
 
   def send message
