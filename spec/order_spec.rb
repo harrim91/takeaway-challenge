@@ -13,7 +13,7 @@ describe Order do
 
   describe '#initialize' do
     it 'is empty' do
-      expect(order.summary.keys.size).to eq 1
+      expect(order.summary).to be_empty
     end
     it 'has a total of zero' do
       expect(order.summary[:total]).to eq 0

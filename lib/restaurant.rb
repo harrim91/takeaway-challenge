@@ -14,7 +14,8 @@ class Restaurant
     @menu.view
   end
 
-  def order dish, quantity #default quantity = 1
+  def order dish, quantity
+    fail EMPTY_ERR if quantity < 1
     @order.add(dish, quantity)
   end
 
