@@ -1,11 +1,6 @@
 require 'twilio_api'
 
 describe TwilioAPI do
-#   subject(:twilio) { described_class.new }
-#   describe '#send' do
-#     let(:message) { 'test message' }
-#     it 'sends a text message to the customer' do
-#       expect(twilio.send(message)).to eq message
-#     end
-#   end
+   subject(:twilio) { described_class.new }
+   it { is_expected.to respond_to(:send).with(1).argument }
 end
